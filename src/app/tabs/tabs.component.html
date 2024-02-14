@@ -1,0 +1,11 @@
+<div class="list-tabs">
+  <div *ngFor="let tab of tabs(); let i=index" class="tab" [class.active]="selectedIndex() === i">
+    <div (click)="open(i)">
+      {{tab.name}}
+    </div>
+    <div (click)="close(i)">x</div>
+  </div>
+</div>
+<div *ngIf="selectedTab() as selectedTab" class="tab-wrapper">
+  <ng-content *ngTemplateOutlet="selectedTab.template; context: {$implicit: selectedTab.data}"></ng-content>
+</div>

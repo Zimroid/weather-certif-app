@@ -1,0 +1,25 @@
+.list-tabs {
+    display: flex;
+}
+
+.tab {
+    background-color: #0db1e7;
+    display: flex;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.tab>div {
+    padding: 0.5rem 1rem;
+}
+
+.tab.active {
+    background-color: #50d3ff;
+    font-weight: 700;
+}
+
+.tab-wrapper {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
